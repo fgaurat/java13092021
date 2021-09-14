@@ -1,0 +1,39 @@
+package com.m2i.helloworld;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		
+
+		//Appel du constructeur
+		Rectangle r = new Rectangle(6,5);
+		Rectangle r1 = new Rectangle();
+		// Rectangle.cpt = 12;
+		
+		System.out.println(Rectangle.getCpt());
+		System.out.println(Rectangle.getCpt());
+		// System.out.println("nb rectangles : "+Rectangle.cpt); // 2
+		//System.out.println(r.getLongueur());
+		//		System.out.println(r.getLargeur());
+		//System.out.println(r.getSurface());
+		//System.out.println(r1.getSurface());
+		
+		
+		
+		RectangleSingleton rs = RectangleSingleton.getInstance();
+		RectangleSingleton rs1 = RectangleSingleton.getInstance();
+		
+		System.out.println(rs);
+		System.out.println(rs1);
+		
+		
+
+		
+		
+		
+		
+	}
+
+}

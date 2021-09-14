@@ -1,0 +1,30 @@
+package com.m2i.helloworld;
+
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import com.m2i.helloworld.events.ClickListener;
+
+public class MaFenetre extends JFrame {
+	JButton button;
+
+	public MaFenetre(){
+		super();
+		button = new JButton("Cliquez ici !");
+		button.setBounds(50,100,195,30);
+		ClickListener c = new ClickListener();
+		button.addActionListener(c);
+		
+		this.add(button);
+		this.setSize(400,400);
+		this.setLayout(null);
+		this.setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+	}
+	
+	
+	
+	
+}

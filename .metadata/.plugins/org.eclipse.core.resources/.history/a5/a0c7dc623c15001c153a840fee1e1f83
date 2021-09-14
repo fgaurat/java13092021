@@ -1,0 +1,6 @@
+package com.m2i.helloworld;
+
+public interface ICalcMath {
+	double getSurface();
+	double getPerimetre();
+}

@@ -1,0 +1,22 @@
+package com.m2i.helloworld;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		
+
+		Rectangle r = new Rectangle();
+		
+		r.setLargeur(10);
+		
+		r.setLongueur(5);		
+		
+		
+		System.out.println(r.getLongueur());
+		
+		
+	}
+
+}

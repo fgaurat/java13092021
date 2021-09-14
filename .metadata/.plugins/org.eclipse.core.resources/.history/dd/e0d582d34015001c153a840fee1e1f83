@@ -1,0 +1,26 @@
+package com.m2i.helloworld;
+
+import java.awt.HeadlessException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MaFenetre extends JFrame {
+	JButton button;
+
+	public MaFenetre(){
+		super();
+		button = new JButton("Cliquez ici !");
+		button.setBounds(50,100,195,30);
+		
+		this.add(button);
+		this.setSize(400,400);
+		this.setLayout(null);
+		this.setVisible(true);
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,52 @@
+package com.m2i.tpcollections;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Rectangle r1 = new Rectangle(5,6);
+		Rectangle r2 = new Rectangle(15,16);
+		Rectangle r3 = new Rectangle(25,26);
+		
+		List<Rectangle> arr = new LinkedList()<Rectangle>();
+		
+		arr.add(r1);
+		arr.add(r2);
+		arr.add(r3);
+		
+		
+		System.out.println(arr.get(1));
+		System.out.println(arr.size());
+		
+		/*
+		for(int i =0;i<10;i++) {
+			System.out.println(i);
+		}*/
+		
+		for(Rectangle r:arr) {
+			System.out.println(r);
+		}
+		
+		Map<String, Rectangle> m = new HashMap<String, Rectangle>();
+		
+		m.put("r1", r1);
+		m.put("r2", r2);
+		m.put("r3", r3);
+		
+		System.out.println(m);
+		
+		Rectangle r = m.get("r1");
+		System.out.println(r);
+		
+		
+		
+		
+
+	}
+
+}

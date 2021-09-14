@@ -1,0 +1,17 @@
+package com.m2i.helloworld;
+
+
+// RectangleGeometrique => PascalCase , UpperCamelCase 
+// rectangleGeometrique => camelCase
+// rectangle_geometrique => snake Case  
+// rectangle-geometrique => kebab-case 
+
+
+
+//Classes et Interfaces UpperCamelCase
+public class Rectangle {
+	
+	private int longueur;
+	private int largeur;
+
+}

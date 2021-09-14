@@ -1,0 +1,18 @@
+package com.m2i.tpcollections;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Rectangle r1 = new Rectangle(5,6);
+		Rectangle r2 = new Rectangle(15,16);
+		Rectangle r3 = new Rectangle(25,26);
+		
+		ArrayList<Rectangle> arr = new ArrayList<Rectangle>();
+		arr.add()
+		
+
+	}
+
+}

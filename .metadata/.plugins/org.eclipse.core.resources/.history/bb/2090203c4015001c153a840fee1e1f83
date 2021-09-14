@@ -1,0 +1,12 @@
+package com.m2i.helloworld;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MaFenetre extends JFrame {
+	JButton button;
+	
+	
+	
+	
+}

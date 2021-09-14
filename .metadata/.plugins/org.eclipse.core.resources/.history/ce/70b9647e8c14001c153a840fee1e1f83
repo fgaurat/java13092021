@@ -1,0 +1,22 @@
+package com.m2i.helloworld;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		
+
+		//Appel du constructeur
+		Rectangle r = new Rectangle(6,5);
+		
+		
+		
+		System.out.println(r.getLongueur());
+		System.out.println(r.getLargeur());
+		System.out.println(r.getSurface());
+		
+		
+	}
+
+}

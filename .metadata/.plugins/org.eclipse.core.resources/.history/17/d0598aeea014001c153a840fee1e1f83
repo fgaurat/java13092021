@@ -1,0 +1,11 @@
+package com.m2i.helloworld;
+
+public class Carre extends Rectangle {
+	
+	
+	private int cote;
+	
+	
+	
+	
+}
