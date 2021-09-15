@@ -9,13 +9,22 @@ public class Main {
 			int b =0;
 			int c = a/b;
 			System.out.println(c);
+			
 		}
+
 		catch(ArithmeticException e) {
-		
-			System.err.println("Erreur !");
-			System.err.println(e);
+			System.out.println("ArithmeticException !");
+			System.out.println(e);
+		}
+		catch(Exception e) {
+			System.out.println("Exception !");
+			System.out.println(e);
+		}
+		finally {
+			System.out.println("après finally");
 		}
 		
+		System.out.println("après");
 		
 			
 
