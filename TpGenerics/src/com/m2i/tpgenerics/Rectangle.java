@@ -17,11 +17,10 @@ public class Rectangle<T extends Number> implements ICalcMath{
 	private static int cpt=0;
 	
 	// Constructeur par défaut
-
 	public Rectangle(){
 		System.out.println("public Rectangle()");
-		this.longueur = (T) new Double(0);
-		this.largeur= (T) new Double(0);
+		this.longueur = (T)Integer.valueOf(0);
+		this.largeur= (T)Integer.valueOf(0);
 		cpt++;
 				
 	}

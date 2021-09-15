@@ -17,6 +17,7 @@ public class Main {
 		Rectangle r3 = new Rectangle(25,26);
 		Rectangle r4 = new Rectangle(7,8);
 		
+		//List<Rectangle> arr = new ArrayList<Rectangle>();
 		List<Rectangle> arr = new LinkedList<Rectangle>();
 		
 		arr.add(r1);
@@ -37,6 +38,9 @@ public class Main {
 			
 			System.out.println(r);
 		}
+		
+		
+		// arr.forEach(new Consumer<Rectangle>() {});
 		
 		System.out.println("méthode forEach");
 		arr.stream().forEach(new Consumer<Rectangle>() {

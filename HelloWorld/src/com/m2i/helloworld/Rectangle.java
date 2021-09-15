@@ -75,7 +75,7 @@ public class Rectangle implements ICalcMath{
 		return cpt;
 	}
 	
-	
+	@Override
 	public double getSurface() {
 		return this.longueur * this.largeur;
 	}

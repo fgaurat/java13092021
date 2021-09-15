@@ -10,14 +10,18 @@ public class HelloWorld {
 	}
 	
 	
-	
-	
 	public static void showSurface(ICalcMath r) {
 		System.out.println("showSurface");
 		// System.out.println(r.toString());
 		System.out.println(r.getSurface());
 	}
-	
+
+	public static void showSurface(Rectangle r) {
+		System.out.println("showSurface Rectangle");
+		// System.out.println(r.toString());
+		System.out.println(r.getSurface());
+	}
+
 	public static void main_herit_interface(String[] args) {
 		
 		Rectangle r = new Rectangle(6,5);
@@ -25,6 +29,9 @@ public class HelloWorld {
 		Cercle ce = new Cercle(2);
 		
 		// Rectangle r2 = new Carre(5);
+		ICalcMath i1 = new Rectangle();
+		ICalcMath i2 = new Carre();
+		ICalcMath i3 = new Cercle();
 		
 		
 		
