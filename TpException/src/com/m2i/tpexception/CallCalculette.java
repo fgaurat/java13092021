@@ -9,9 +9,15 @@ public class CallCalculette {
 			
 			result =Calculette.division(a, b);
 		}
+
+		catch(Exception e) {
+			System.out.println("Dans le catch CallCalculette");
+			throw e;
+		}
 		finally {
 			
 			System.out.println("finally result "+result);
+			
 		}
 		return result ;
 		

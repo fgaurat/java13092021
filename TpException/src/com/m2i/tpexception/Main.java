@@ -24,9 +24,7 @@ public class Main {
 			System.out.println(e);
 			e.printStackTrace();
 		}
-		finally {
-			System.out.println("après finally");
-		}
+
 		
 		System.out.println("après");
 		
