@@ -1,8 +1,6 @@
 package com.m2i.tpio;
 
-import java.io.Serializable;
-
-public class Carre extends Rectangle implements Serializable {
+public class Carre extends Rectangle {
 
 	private int cote;
 
