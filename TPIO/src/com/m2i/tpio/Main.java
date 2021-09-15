@@ -1,18 +1,24 @@
 package com.m2i.tpio;
 
-import java.io.File;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
-
 	public static void main(String[] args) {
 
-		try {
-			File f = new File("le-fichier.txt");
-			FileWriter fw = new FileWriter(f);
-			fw.write("Hello World !");
-			fw.close();
+	}
+
+	public static void main_write(String[] args) {
+
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("le-fichier.txt"));
+
+		) {
+
+			bw.write("Hello World !");
+			bw.newLine();
+			bw.write("Hello World !");
+			bw.newLine();
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
