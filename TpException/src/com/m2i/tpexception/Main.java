@@ -1,8 +1,28 @@
 package com.m2i.tpexception;
 
 public class Main {
-
+	
+	
+	
+	
 	public static void main(String[] args) {
+		int a =2;
+		int b =0;
+		int c = a/b;
+		double r=0;
+		try {
+			r = Calculette.division(a, b);
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(r);		
+
+	}
+
+	public static void main_01(String[] args) {
 			
 		try{	
 			int a =2;
