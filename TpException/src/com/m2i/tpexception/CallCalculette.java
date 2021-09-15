@@ -3,7 +3,7 @@ package com.m2i.tpexception;
 public class CallCalculette {
 
 	
-	public static double callDivision(int a,int b) {
+	public static double callDivision(int a,int b) throws Exception {
 		double result = 0;
 		try {
 			
