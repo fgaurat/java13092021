@@ -14,10 +14,31 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.Scanner;
 
 public class Main {
+
+	public static void main(String[] args) {
+
+		try {
+			final String fileName = "lefichier_nio.txt";
+			Path f = Paths.get(fileName);
+			Files.createFile(f);
+
+			System.out.println(f.toFile().exists());
+
+			BufferedReader br = Files.newBufferedReader(f);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	public static void main_properties(String[] args) {
 		Properties p = new Properties();
