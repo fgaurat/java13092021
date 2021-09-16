@@ -7,13 +7,62 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.net.Socket;
+import java.util.Properties;
+import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main_properties(String[] args) {
+		Properties p = new Properties();
+
+		try (FileReader fr = new FileReader("config.properties");) {
+
+			p.load(fr);
+			System.out.println(p);
+			System.out.println(p.getProperty("user"));
+			p.setProperty("user", "root");
+			FileWriter fw = new FileWriter("config.properties");
+			p.store(fw, "change user name");
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void main_socket_http(String[] args) {
+
+		try (Socket s = new Socket("5.196.102.147", 80)) {
+
+			System.out.println("OK");
+
+			OutputStream os = s.getOutputStream();
+
+			InputStream is = s.getInputStream();
+
+			PrintStream ps = new PrintStream(os);
+
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+
+			ps.println("GET /index.php");
+
+			br.lines().forEach(System.out::println);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void main_scan_port(String[] args) {
 
 		for (int i = 1; i < 1024; i++) {
 
@@ -61,6 +110,11 @@ public class Main {
 		// String nom = in.readLine();
 		String nom = System.console().readLine();
 		System.out.println("Bonjour " + nom);
+
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		System.out.println("Hello " + s);
+		sc.close();
 	}
 
 	public static void main_read(String[] args) {

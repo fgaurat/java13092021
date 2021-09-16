@@ -2,6 +2,10 @@ package com.m2i.tpio;
 
 public class Carre extends Rectangle {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2268951786825920512L;
 	private int cote;
 
 	public Carre(int cote) {
