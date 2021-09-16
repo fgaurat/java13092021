@@ -26,7 +26,12 @@ public class MainHttp {
 			List<Todo> todos = objectMapper.readValue(client.getInputStream(), new TypeReference<List<Todo>>() {
 			});
 
-			todos.forEach(System.out::println);
+			// todos.forEach(System.out::println);
+
+			for (Todo todo : todos) {
+
+				dao.save(todo);
+			}
 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
