@@ -30,21 +30,18 @@ public class MainHttp {
 			// todos.forEach(System.out::println);
 
 			TodoDAO dao;
-			try {
-				dao = new TodoDAO();
-				for (Todo todo : todos) {
-					dao.save(todo);
-				}
-
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			dao = new TodoDAO();
+			for (Todo todo : todos) {
+				dao.save(todo);
 			}
 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
