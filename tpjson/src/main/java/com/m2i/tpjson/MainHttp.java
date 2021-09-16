@@ -3,6 +3,7 @@ package com.m2i.tpjson;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -28,9 +29,16 @@ public class MainHttp {
 
 			// todos.forEach(System.out::println);
 
-			for (Todo todo : todos) {
+			TodoDAO dao;
+			try {
+				dao = new TodoDAO();
+				for (Todo todo : todos) {
+					dao.save(todo);
+				}
 
-				dao.save(todo);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 		} catch (MalformedURLException e) {
