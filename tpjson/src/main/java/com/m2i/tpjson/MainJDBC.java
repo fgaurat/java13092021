@@ -5,10 +5,25 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class MainJDBC {
 
 	public static void main(String[] args) {
+		TodoDAO dao;
+		try {
+			dao = new TodoDAO();
+			List<Todo> l = dao.findAll();
+
+			l.forEach(System.out::println);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void main_JDBC(String[] args) {
 		// TODO Auto-generated method stub
 		try {
 			Connection conn = null;

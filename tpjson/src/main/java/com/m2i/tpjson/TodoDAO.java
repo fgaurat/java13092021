@@ -20,7 +20,7 @@ public class TodoDAO {
 	 * 
 	 * }
 	 */
-	public List<Todo> findByAll() throws SQLException {
+	public List<Todo> findAll() throws SQLException {
 		List<Todo> l = new ArrayList<Todo>();
 		Statement st = conn.createStatement();
 		ResultSet rs = st.executeQuery("SELECT * FROM user09");
