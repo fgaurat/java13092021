@@ -3,7 +3,6 @@ INDEX VERSION 1.131+/Users/fgaurat/eclipse-2021-09-workspace/.metadata/.plugins/
 4118418830.index
 2796130785.index
 879735224.index
-2277229386.index
 522402770.index
 1790464448.index
 2168283095.index

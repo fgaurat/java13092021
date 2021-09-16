@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main_jackson_read_collection(String[] args) {
 		final String fileName = "list_rectangle.json";
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
