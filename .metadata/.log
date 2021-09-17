@@ -2072,3 +2072,27 @@ java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:44:54.003
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:46:22.825
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:46:22.835
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:46:25.886
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:46:25.918
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:47:28.423
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:47:28.426
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:47:37.962
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-09-17 13:47:37.966
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
