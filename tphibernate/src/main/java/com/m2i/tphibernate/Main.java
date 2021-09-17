@@ -1,5 +1,7 @@
 package com.m2i.tphibernate;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -13,6 +15,14 @@ public class Main {
 		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
 		SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
 		Session session = sessionFactory.openSession();
+
+		session.beginTransaction();
+		List<Todo> result = session.createQuery("from Todo").list();
+		result.forEach(System.out::println);
+
+		session.getTransaction().commit();
+		session.close();
+
 	}
 
 }

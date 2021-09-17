@@ -4,14 +4,15 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="">
+<hibernate-mapping package="com.m2i.tphibernate">
 
-    <class name="" table="">
+    <class name="Todo" table="user09">
         <id name="id" column="id">
             <generator class="identity"/>
         </id>
-        <property name="" type="int" column=""/>
-        <property name="" type="int"/>
+        <property name="userId" type="int" column="user_id"/>
+        <property name="title" type="string"/>
+        <property name="completed" type="boolean"/>
     </class>
 
 </hibernate-mapping>

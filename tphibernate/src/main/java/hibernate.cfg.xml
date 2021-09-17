@@ -27,9 +27,9 @@
 		<property name="use_sql_comments">true</property>
 		
 		<!-- List of XML mapping files -->
-		<!-- 
-		<mapping resource="Rectangle.hbm.xml" />
-		-->
+		
+		<mapping resource="Todo.hbm.xml" />
+		
 		
 
 	</session-factory>
