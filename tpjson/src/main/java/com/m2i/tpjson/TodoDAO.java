@@ -11,8 +11,8 @@ import java.util.List;
 public class TodoDAO {
 	private Connection conn;
 
-	TodoDAO() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:mariadb://5.196.102.146/user01", "user01", "12345");
+	TodoDAO(String url, String user, String password) throws SQLException {
+		conn = DriverManager.getConnection(url, user, password);
 	}
 
 	/*
@@ -42,8 +42,8 @@ public class TodoDAO {
 		int user_id = todo.getUserId();
 		String title = todo.getTitle();
 		Boolean completed = todo.getCompleted();
-		st.execute("INSERT INTO user09(user_id,title,completed) VALUES(" + user_id + ",'" + title + "'," + completed
-				+ ")");
+		st.execute(
+				"INSERT INTO todos(user_id,title,completed) VALUES(" + user_id + ",'" + title + "'," + completed + ")");
 	}
 	/*
 	 * public void delete(Todo todo) {
