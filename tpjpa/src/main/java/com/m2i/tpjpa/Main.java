@@ -1,4 +1,4 @@
-package com.m2i.tphibernate;
+package com.m2i.tpjpa;
 
 import java.util.List;
 
