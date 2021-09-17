@@ -1,7 +1,5 @@
 package com.m2i.tphibernate;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -17,9 +15,17 @@ public class Main {
 		Session session = sessionFactory.openSession();
 
 		session.beginTransaction();
-		List<Todo> result = session.createQuery("from Todo").list();
-		result.forEach(System.out::println);
+		// HQL : Hibernate Query Language
+		// List<Todo> result = session.createQuery("from Todo where
+		// completed=false").list();
+		// result.forEach(System.out::println);
 
+		Todo t = new Todo();
+		t.setTitle("Une nouvelle Todo");
+		t.setUserId(10);
+		t.setCompleted(false);
+
+		session.save(t);
 		session.getTransaction().commit();
 		session.close();
 
