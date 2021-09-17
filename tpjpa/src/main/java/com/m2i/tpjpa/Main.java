@@ -1,34 +1,31 @@
 package com.m2i.tpjpa;
 
-import java.util.List;
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-		SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-		Session session = sessionFactory.openSession();
+		EntityManagerFactory sessionFactory = Persistence.createEntityManagerFactory("com.m2i.tpjpa");
 
-		session.beginTransaction();
-		// HQL : Hibernate Query Language
-		List<Todo> result = session.createQuery("from Todo where completed=false").list();
-		result.forEach(System.out::println);
+		EntityManager entityManager = sessionFactory.createEntityManager();
+		entityManager.getTransaction().begin();
 
-//		Todo t = new Todo();
-//		t.setTitle("Une nouvelle Todo");
-//		t.setUserId(10);
-//		t.setCompleted(false);
+		Todo t = new Todo();
+		t.setTitle("Une nouvelle Todo JPA");
+		t.setUserId(10);
+		t.setCompleted(true);
+		entityManager.persist(t);
 
-//		session.save(t);
-//		session.getTransaction().commit();
-//		session.close();
+		/*
+		 * List<Todo> result = entityManager.createQuery("from Todo",
+		 * Todo.class).getResultList();
+		 * 
+		 * for (Todo todo : result) { System.out.println(todo); }
+		 */
+		entityManager.getTransaction().commit();
+		entityManager.close();
 
 	}
 
